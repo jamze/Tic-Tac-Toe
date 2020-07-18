@@ -1,11 +1,11 @@
 # write your code here
 
 import math
-def print_function(pole):
+def print_function(all_moves):
     print("---------")
-    print("|", pole[0], pole[1], pole[2], "|")
-    print("|", pole[3], pole[4], pole[5], "|")
-    print("|", pole[6], pole[7], pole[8], "|")
+    print("|", all_moves[0], all_moves[1], all_moves[2], "|")
+    print("|", all_moves[3], all_moves[4], all_moves[5], "|")
+    print("|", all_moves[6], all_moves[7], all_moves[8], "|")
     return("---------")
 
 count_X = 0
@@ -18,9 +18,9 @@ win_X = 0
 win_O = 0
 impossible = 0
 
-pole_input = input("Enter cells:")
-pole = list(pole_input)
-print(print_function(pole))
+all_moves_input = input("Enter cells:")
+all_moves = list(all_moves_input)
+print(print_function(all_moves))
 
 #cordinates = input("Enter the coordinates:")
 while True:
@@ -28,73 +28,73 @@ while True:
     if cordinates[0].isnumeric() and cordinates[0].isnumeric():
         if 0 < int(cordinates[0]) < 4 and (0 < int(cordinates[2]) < 4):
             if cordinates == "1 1":
-                if pole[6] == "_":
-                    pole[6] = "X"
-                    print(print_function(pole))
+                if all_moves[6] == "_":
+                    all_moves[6] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "2 1":
-                if pole[7] == "_":
-                    pole[7] = "X"
-                    print(print_function(pole))
+                if all_moves[7] == "_":
+                    all_moves[7] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "3 1":
-                if pole[8] == "_":
-                    pole[8] = "X"
-                    print(print_function(pole))
+                if all_moves[8] == "_":
+                    all_moves[8] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "1 2":
-                if pole[3] == "_":
-                    pole[3] = "X"
-                    print(print_function(pole))
+                if all_moves[3] == "_":
+                    all_moves[3] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "2 2":
-                if pole[4] == "_":
-                    pole[4] = "X"
-                    print(print_function(pole))
+                if all_moves[4] == "_":
+                    all_moves[4] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "3 2":
-                if pole[5] == "_":
-                    pole[5] = "X"
-                    print(print_function(pole))
+                if all_moves[5] == "_":
+                    all_moves[5] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "1 3":
-                if pole[0] == "_":
-                    pole[0] = "X"
-                    print(print_function(pole))
+                if all_moves[0] == "_":
+                    all_moves[0] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "2 3":
-                if pole[1] == "_":
-                    pole[1] = "X"
-                    print(print_function(pole))
+                if all_moves[1] == "_":
+                    all_moves[1] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")
                     continue
             elif cordinates == "3 3":
-                if pole[2] == "_":
-                    pole[2] = "X"
-                    print(print_function(pole))
+                if all_moves[2] == "_":
+                    all_moves[2] = "X"
+                    print(print_function(all_moves))
                     break
                 else:
                     print("This cell is occupied! Choose another one!")

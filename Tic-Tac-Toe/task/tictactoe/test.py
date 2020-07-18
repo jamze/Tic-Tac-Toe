@@ -43,22 +43,22 @@ while x_or_y<5:
 def check()
 
     # pionowo
-    if (pole[0] == pole[3] == pole[6] == "X" or
-            pole[1] == pole[4] == pole[7] == "X" or
-            pole[2] == pole[5] == pole[8] == "X"):
+    if (all_moves[0] == all_moves[3] == all_moves[6] == "X" or
+            all_moves[1] == all_moves[4] == all_moves[7] == "X" or
+            all_moves[2] == all_moves[5] == all_moves[8] == "X"):
         win_X += 1
 
-    if (pole[0] == pole[3] == pole[6] == "O" or
-            pole[1] == pole[4] == pole[7] == "O" or
-            pole[2] == pole[5] == pole[8] == "O"):
+    if (all_moves[0] == all_moves[3] == all_moves[6] == "O" or
+            all_moves[1] == all_moves[4] == all_moves[7] == "O" or
+            all_moves[2] == all_moves[5] == all_moves[8] == "O"):
         win_O += 1
 
     # krzyz
 
-    if (pole[0] == pole[4] == pole[8] or
-            pole[2] == pole[4] == pole[6]):
-        if (pole[4] == "X"):
+    if (all_moves[0] == all_moves[4] == all_moves[8] or
+            all_moves[2] == all_moves[4] == all_moves[6]):
+        if (all_moves[4] == "X"):
             win_X += 1
-        elif (pole[4] == "Y"):
+        elif (all_moves[4] == "Y"):
             win_O += 1
 

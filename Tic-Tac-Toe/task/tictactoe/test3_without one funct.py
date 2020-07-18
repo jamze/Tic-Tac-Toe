@@ -1,6 +1,11 @@
+### print " ", X or O in given position
+
+#matrix = [[" " for columns in range(3)]
+#          for rows in range(3)]
 
 all_moves = [[" " for columns in range(3)]
           for rows in range(3)]
+
 
 def show(matrix):
 
@@ -30,13 +35,19 @@ while step < 10:
                         what = "O"
                 else:
                     what = " "
+                #print("what:", what)
+
+                #cord_col = int(cordinates[0]) - 1
+                #cord_row = 3 - int(cordinates[2])
+                #all_moves[cord_row][cord_col] = str(what)
 
                 cord_col = int(cordinates[0])-1
                 cord_row = 3 - (int(cordinates[2]))
 
                 if all_moves[cord_row][cord_col] == " ":
                     all_moves[cord_row][cord_col] = what
-
+                    #print("previous: ", all_moves)
+                    #all_moves[1 - 1][3 - 1] = "1,3"
                     show(all_moves)
                     step += 1
                 else:
@@ -53,10 +64,10 @@ while step < 10:
         print("Input proper coordinates")
         continue
 
+    #print("1", all_moves[3-1][1-1], "2", all_moves[2-1][1-1], "3", all_moves[1-1][1-1])
 
 
-
-    # vertical
+    # pionowo
     if (all_moves[3-1][1-1] == all_moves[2-1][1-1] == all_moves[1-1][1-1] == "X" or
             all_moves[3-1][2-1] == all_moves[2-1][2-1] == all_moves[1-1][2-1] == "X" or
             all_moves[3-1][3-1] == all_moves[2-1][3-1] == all_moves[1-1][3-1] == "X"):
@@ -67,7 +78,7 @@ while step < 10:
             all_moves[3 - 1][3 - 1] == all_moves[2 - 1][3 - 1] == all_moves[1 - 1][3 - 1] == "O"):
         win_O += 1
 
-    # cross
+    # krzyz
 
     if (all_moves[3 - 1][1 - 1] == all_moves[2 - 1][2 - 1] == all_moves[1 - 1][3 - 1] or
             all_moves[1 - 1][1 - 1] == all_moves[2 - 1][2 - 1] == all_moves[3 - 1][3 - 1]):
@@ -86,9 +97,8 @@ while step < 10:
             print ("O wins!")
             break
 
-    if win_X == 0 == win_O and step == 10:
+    if win_X == 0 == win_O and step == 9:
         print("Draw")
-        break
 #    elif win_X == win_X == 0 and "_" in all_moves and impossible == 0:
 #        print("Game not finished")
 

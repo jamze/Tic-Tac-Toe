@@ -18,7 +18,7 @@ def board(step=0, col=1, row=1):
 
     return matrix
 
-### print board
+### print all board
 
 def show(matrix):
 
@@ -28,28 +28,29 @@ def show(matrix):
     print("|", " ".join(matrix[2]), "|")
     print("---------")
 
+
+### create 
 # main
 
 
 print(show(board()))
 step = 1
-before = []
+all_moves = []
 
 while step < 5:
     cordinates = input("Enter the coordinates:")
     if len(cordinates) == 3:
         if cordinates[0].isnumeric() and cordinates[2].isnumeric():
-            if 0 < int(cordinates[0]) <= 3 and (0 < int(cordinates[2]) <= 3):
-                show(board(step, int(cordinates[0]), int(cordinates[2]))
-           #     for t in range(2):
-            #        before.append([cordinates[0]])
-             #       for j in range (1):
-              #          before[i].append(cordinates[2]
-               # print
+            if (0 < int(cordinates[0]) <= 3 and (0 < int(cordinates[2]) <= 3)):
 
-                step += 1
+                #moves[int(cordinates[0])].append(int((cordinates[2])))
+                move = board(step, int(cordinates[0]), int(cordinates[2]))
+                all_moves.append(move)
+
+                print(board(step, int(cordinates[0]), int(cordinates[2])))
+
             else:
-                print("Coordinates should be from 1 to 3!")
+                print("Coordinates should be from 11 to 3!")
                 continue
         else:
             print("You should enter numbers!")

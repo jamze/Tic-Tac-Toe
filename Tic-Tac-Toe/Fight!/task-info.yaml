@@ -345,6 +345,13 @@ files:
 - name: tictactoe/test2.py
   visible: true
   learner_created: true
+- name: tictactoe/test3_without one funct.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/73/stages/403/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/73/stages/403/implement">JetBrains
+    Academy</a>
+  time: Sat, 18 Jul 2020 15:09:34 UTC
 record: -1

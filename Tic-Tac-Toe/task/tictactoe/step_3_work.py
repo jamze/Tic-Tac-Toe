@@ -12,15 +12,15 @@ win_X = 0
 win_O = 0
 impossible = 0
 
-pole = input("Enter cells:")
+all_moves = input("Enter cells:")
 
 print("---------")
-print("|", pole[0], pole[1], pole[2], "|")
-print("|", pole[3], pole[4], pole[5], "|")
-print("|", pole[6], pole[7], pole[8], "|")
+print("|", all_moves[0], all_moves[1], all_moves[2], "|")
+print("|", all_moves[3], all_moves[4], all_moves[5], "|")
+print("|", all_moves[6], all_moves[7], all_moves[8], "|")
 print("---------")
 
-for char in pole:
+for char in all_moves:
     if char == "X":
         count_X += 1
     elif char == "O":
@@ -38,35 +38,35 @@ for char in pole:
 
 # poziomo
 
-if (pole[0] == pole[1] == pole[2] == "X" or
-        pole[3] == pole[4] == pole[5] == "X" or
-        pole[6] == pole[7] == pole[8] == "X"):
+if (all_moves[0] == all_moves[1] == all_moves[2] == "X" or
+        all_moves[3] == all_moves[4] == all_moves[5] == "X" or
+        all_moves[6] == all_moves[7] == all_moves[8] == "X"):
     win_X += 1
 
-if (pole[0] == pole[1] == pole[2] == "O" or
-        pole[3] == pole[4] == pole[5] == "O" or
-        pole[6] == pole[7] == pole[8]) == "O":
+if (all_moves[0] == all_moves[1] == all_moves[2] == "O" or
+        all_moves[3] == all_moves[4] == all_moves[5] == "O" or
+        all_moves[6] == all_moves[7] == all_moves[8]) == "O":
     win_O += 1
 
 
 # pionowo
-if (pole[0] == pole[3] == pole[6] == "X" or
-        pole[1] == pole[4] == pole[7] == "X" or
-        pole[2] == pole[5] == pole[8] == "X"):
+if (all_moves[0] == all_moves[3] == all_moves[6] == "X" or
+        all_moves[1] == all_moves[4] == all_moves[7] == "X" or
+        all_moves[2] == all_moves[5] == all_moves[8] == "X"):
     win_X += 1
 
-if (pole[0] == pole[3] == pole[6] == "O" or
-        pole[1] == pole[4] == pole[7] == "O" or
-        pole[2] == pole[5] == pole[8] == "O"):
+if (all_moves[0] == all_moves[3] == all_moves[6] == "O" or
+        all_moves[1] == all_moves[4] == all_moves[7] == "O" or
+        all_moves[2] == all_moves[5] == all_moves[8] == "O"):
     win_O += 1
 
 # krzyz
 
-if (pole[0] == pole[4] == pole[8] or
-        pole[2] == pole[4] == pole[6]):
-    if (pole[4] == "X"):
+if (all_moves[0] == all_moves[4] == all_moves[8] or
+        all_moves[2] == all_moves[4] == all_moves[6]):
+    if (all_moves[4] == "X"):
         win_X += 1
-    elif (pole[4] == "Y"):
+    elif (all_moves[4] == "Y"):
         win_O += 1
 
 # conditions for impossible
@@ -82,9 +82,9 @@ if math.fabs(count_X - count_O) >= 2:
 if consecutive_O == consecutive_X and consecutive_O > 0:
     print("Impossible")
 
-if win_X == 0 == win_O and "_" not in pole:
+if win_X == 0 == win_O and "_" not in all_moves:
     print("Draw")
-elif win_X == win_X == 0 and "_" in pole and impossible == 0:
+elif win_X == win_X == 0 and "_" in all_moves and impossible == 0:
     print("Game not finished")
 
 
