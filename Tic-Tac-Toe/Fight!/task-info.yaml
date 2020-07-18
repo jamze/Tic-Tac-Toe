@@ -339,6 +339,12 @@ files:
 - name: tictactoe/test.py
   visible: true
   learner_created: true
+- name: tictactoe/step_4_finished.py
+  visible: true
+  learner_created: true
+- name: tictactoe/test2.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/73/stages/403/implement
 status: Unchecked
 record: -1
